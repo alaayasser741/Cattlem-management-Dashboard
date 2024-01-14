@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleAside } from "../../store/layoutSlice";
 import styles from "../../styles/aside.module.css";
 import {
   LogoIcon,
@@ -10,6 +12,8 @@ import {
 } from "../../assets/icons/icons";
 
 const Aside = () => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className={styles.aside__title}>
@@ -19,7 +23,10 @@ const Aside = () => {
           </i>
           <h1>Cattlem</h1>
         </span>
-        <i className={styles.aside__double_arrow}>
+        <i
+          className={styles.aside__double_arrow}
+          onClick={() => dispatch(toggleAside())}
+        >
           <DoubleArrowIcon />
         </i>
       </div>
