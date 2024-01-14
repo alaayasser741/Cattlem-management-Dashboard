@@ -1,0 +1,115 @@
+.aside__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 3rem;
+}
+
+.aside__logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    & h1 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+.aside__double_arrow {
+    background-color: #F2F6EE;
+    inline-size: 24px;
+    block-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-color-light);
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    &:hover{
+        background-color: var(--main-color-light);
+        svg{
+            path{
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -ms-transition: 0.3s;
+                -o-transition: 0.3s;
+                transition: 0.3s;
+                fill: var(--white) !important;
+                stroke: var(--white) !important;
+            }
+        }
+    }
+}
+
+.aside__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aside__links li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .7rem 1rem;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    border-radius: .5rem;
+    &:hover{
+        background-color: var(--main-color);
+
+        span {
+            color: var(--white);
+        }
+
+        path {
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+            stroke: var(--white) !important;
+        }
+    }
+}
+
+.aside__links span {
+    color: var(--text-dark);
+    font-size: 0.875rem;
+    font-weight: 600;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.aside__dashboard_link:hover {
+    svg {
+        fill: none !important;
+
+        path {
+            fill: var(--white) !important;
+            stroke: none !important;
+        }
+    }
+}

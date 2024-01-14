@@ -1,0 +1,43 @@
+.dashboard__layout {
+    display: grid;
+    grid-template-columns: 264px 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr;
+    gap: 2rem 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "aside nav nav"
+        "aside section section"
+        "aside section section";
+    background-color: var(--background);
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+.dashboard__aside {
+    grid-area: aside;
+    background-color: var(--white);
+    height: 100%;
+    padding: 1rem;
+    box-shadow: 4px 0px 30px 0px rgba(131, 98, 234, 0.05);
+    border-inline-end: 1px solid #F0F1F3;
+
+}
+
+.dashboard__nav {
+    grid-area: nav;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid  #F3F3F3;
+}
+
+.dashboard__body {
+    grid-area: section;
+    background-color: var(--white);
+    margin-inline-start: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 20px 0px rgba(46, 45, 116, 0.02);
+    border: 1px solid #F4F4F4;
+}
