@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/dashboard.module.css";
 import Aside from "../Components/shared/Aside";
 import Nav from "../Components/shared/Nav";
+import Activity from "../Components/Activity";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleAside } from "../store/layoutSlice";
 
@@ -29,7 +30,9 @@ const Dashboard = () => {
       <nav className={styles.dashboard__nav}>
         <Nav />
       </nav>
-      <section className={styles.dashboard__body}>section</section>
+      <section className={isAsideOpen ? `${styles.dashboard__body} ${styles.remove_margin}`:`${styles.dashboard__body}`}>
+        <Activity />
+      </section>
       <div
         onClick={() => dispatch(toggleAside())}
         className={
