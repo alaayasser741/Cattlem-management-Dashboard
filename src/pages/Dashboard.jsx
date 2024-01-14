@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Dashboard.module.css";
+import styles from "../styles/dashboard.module.css";
 import Aside from "../components/shared/Aside";
 import Nav from "../components/shared/Nav";
 import { useSelector, useDispatch } from "react-redux";
