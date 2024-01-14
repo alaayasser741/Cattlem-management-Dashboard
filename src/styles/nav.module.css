@@ -279,6 +279,8 @@
         inline-size: 120px;
         inset-block-start: calc(100% + 0.5rem);
         inset-inline-start:-80px !important;
-
+    }
+    .nav__user_drop_list i{
+        display: inline;
     }
 }
