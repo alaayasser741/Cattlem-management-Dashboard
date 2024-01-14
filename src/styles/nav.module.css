@@ -68,6 +68,8 @@
     -ms-transition: max-block-size 0.3s ease-in-out;
     -o-transition: max-block-size 0.3s ease-in-out;
     transition: max-block-size 0.3s ease-in-out;
+    z-index: 999;
+
 }
 
 .nav__language_drop_list li {
@@ -108,6 +110,15 @@
     cursor: pointer;
 }
 
+.nav__profile::after {
+    content: '';
+    block-size: 100%;
+    inline-size: 1px;
+    background-color: var(--border);
+    position: absolute;
+    inset-inline-start: -15px;
+}
+
 .nav__user_drop_list {
     position: absolute;
     inline-size: 100%;
@@ -127,6 +138,7 @@
     -ms-transition: max-block-size 0.3s ease-in-out;
     -o-transition: max-block-size 0.3s ease-in-out;
     transition: max-block-size 0.3s ease-in-out;
+    z-index: 999;
 }
 
 .nav__user_drop_list li {
@@ -271,16 +283,19 @@
     .nav__user__title {
         display: none;
     }
-    .nav__profile i{
+
+    .nav__profile i {
         display: none;
     }
-    .nav__user_drop_list{
+
+    .nav__user_drop_list {
         position: absolute;
         inline-size: 120px;
         inset-block-start: calc(100% + 0.5rem);
-        inset-inline-start:-80px !important;
+        inset-inline-start: -80px !important;
     }
-    .nav__user_drop_list i{
+
+    .nav__user_drop_list i {
         display: inline;
     }
 }
